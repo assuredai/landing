@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CxO AI Dilemma</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            animation: pulse 2s infinite;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #ffd23f;
+            margin-bottom: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dilemma-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 40px;
+            align-items: center;
+            margin: 60px 0;
+        }
+
+        .pressure-box {
+            background: rgba(255, 107, 53, 0.2);
+            border: 3px solid #ff6b35;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: all 0.3s ease;
+        }
+
+        .pressure-box:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.05);
+            background: rgba(255, 107, 53, 0.3);
+        }
+
+        .pressure-box.right {
+            transform: perspective(1000px) rotateY(5deg);
+        }
+
+        .pressure-box.right:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.05);
+        }
+
+        .pressure-title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #ffd23f;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .pressure-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pressure-items li {
+            font-size: 1.1rem;
+            margin: 12px 0;
+            padding: 8px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            border-left: 4px solid #ffd23f;
+            font-weight: 600;
+        }
+
+        .vs-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #ff6b35, #ffd23f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #1a1a2e;
+            text-shadow: none;
+            animation: spin 4s linear infinite;
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+        }
+
+        .outcome-section {
+            margin-top: 60px;
+            background: rgba(255, 210, 63, 0.1);
+            border: 2px solid #ffd23f;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .outcome-title {
+            font-size: 1.8rem;
+            color: #ffd23f;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .outcome-text {
+            font-size: 1.3rem;
+            line-height: 1.4;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .emphasis {
+            color: #ff6b35;
+            font-size: 1.1em;
+            text-decoration: underline;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="title">The AI Investment Dilemma</h1>
+        <h2 class="subtitle">CxOs & Board Directors: Caught Between Worlds</h2>
+        
+        <div class="dilemma-container">
+            <div class="pressure-box">
+                <div class="pressure-title">The Pressure to Invest</div>
+                <ul class="pressure-items">
+                    <li>"AI is the future"</li>
+                    <li>Competitor advantage fears</li>
+                    <li>Shareholder expectations</li>
+                    <li>Tech vendor promises</li>
+                    <li>FOMO on transformation</li>
+                    <li>Board pressure to "innovate"</li>
+                </ul>
+            </div>
+            
+            <div class="vs-circle">VS</div>
+            
+            <div class="pressure-box right">
+                <div class="pressure-title">The Reality Check</div>
+                <ul class="pressure-items">
+                    <li>Unclear ROI timelines</li>
+                    <li>Massive implementation costs</li>
+                    <li>Cultural resistance</li>
+                    <li>Skills gap chaos</li>
+                    <li>Regulatory unknowns</li>
+                    <li>Job displacement fears</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="outcome-section">
+            <div class="outcome-title">The AssuredAI Perspective:</div>
+            <div class="outcome-text">
+                Success isn't about the technology—it's about <span class="emphasis">EXTREME EXECUTION</span> 
+                with <span class="emphasis">EXTREME HUMANISM</span>. 
+                The winners will be those who invest in AI while obsessively focusing on 
+                <span class="emphasis">PEOPLE + PERFORMANCE</span>: strategic deployment that elevates human potential, 
+                mitigates workforce disruption, and delivers measurable value through transformation.
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Executive Leadership Presentation • 2025
+    </div>
+</body>
+</html>
